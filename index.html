@@ -17,13 +17,16 @@
 
 
 <script>
+
 var audio_context = window.AudioContext || window.webkitAudioContext;
+
 var con = new audio_context();
+
 
 function playSynth(){
 	var osc = con.createOscillator();
-	osc.frequency.value = Math.random * 500; //random - beetwen 0 and 1
-	osc.connect(con.destinantion);
+	osc.frequency.value = Math.random() * 500; //random - beetwen 0 and 1
+	osc.connect(con.destination);
 	osc.start();
 }
 
