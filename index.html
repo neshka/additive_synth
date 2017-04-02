@@ -1,0 +1,30 @@
+<body>
+    <!-- we call the playSynth function 
+         every time a key is pressed on the keyboard 
+         tabindex allows this div tag (the green area)
+         to receive keyboard input
+         -->
+    <div
+    style="background:pink; height:15%;color:grey; text-align:center;border:1px solid red"
+    tabindex="0"
+    onkeydown="playSynth()"
+
+    ><!--playSynth function from script-->
+
+        <h1>Click here and tap th keyboard</h1>
+    </div>
+</body>
+
+
+<script>
+var audio_context = window.AudioContext || window.webkitAudioContext;
+var con = new audio_context();
+
+function playSynth(){
+	var osc = con.createOscillator();
+	osc.frequency.value = Math.random * 500; //random - beetwen 0 and 1
+	osc.connect(con.destinantion);
+	osc.start();
+}
+
+</script>
