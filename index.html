@@ -25,8 +25,14 @@ var con = new audio_context();
 
 function playSynth(){
 	var osc = con.createOscillator();
-	osc.frequency.value = Math.random() * 500; //random - beetwen 0 and 1
-	osc.connect(con.destination);
+    var amp = con.createGain();
+    amp.gain.value = 0.05;
+    osc.frequency.value = Math.random() * 500; //random - beetwen 0 and 1
+
+    osc.connect(amp);
+
+	
+	amp.connect(con.destination);
 	osc.start();
 }
 
