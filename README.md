@@ -1,2 +1,2 @@
 # Additive_synth
-LEARN TO CODE ELECTRONIC MUSIC TOOLS WITH JAVASCRIPT GOLDSMITHS, UNIVERSITY OF LONDON
+Open the page and play on your keyboard :)
